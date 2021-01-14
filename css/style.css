@@ -1,0 +1,132 @@
+body{
+    background-color: thistle;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+
+
+header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 10% ;
+background-color: rgb(0, 170, 182);
+}
+.logo{
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+}
+.nav-links{
+    list-style: none;
+}
+ .nav-links li{
+     display: inline-block;
+     padding:0px 20px ;
+ }
+ .a_white:hover{
+     color: rgb(16, 87, 201);
+ }
+
+li,.a_white{
+
+    font-size: 20px;
+    color: rgb(238, 222, 222);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: grey;
+    border-radius: 20px;
+
+
+}
+
+
+   main{
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid blue; to see is it center or not */
+}
+section{
+    background-color: whitesmoke;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+} 
+.section-title{
+    color: violet;
+}
+.top-players, .blogs, .courses{
+    display: grid;
+   
+    grid-gap: 40px;
+    margin-top: 20px;
+    place-items: center;
+}  
+ .top-players, .courses{
+    grid-template-columns: repeat(3, 1fr);
+} 
+.blogs{
+    grid-template-columns: repeat(2, 1fr);
+}
+.player, .blog{   
+    display: flex;
+    align-items:center;
+} 
+.player img{
+    height: 50px;
+    margin-right: 20px;
+}
+.thumbnail img{
+    width: 200px;
+    margin-right: 20px;
+
+}
+.filled-color{
+    color:goldenrod;
+    font-size: 0.8em;
+}
+.unfilled-color{
+    color:lightgrey;
+    font-size: 0.8em;
+}
+.course img{
+     height: 160px; 
+    width: 200px; 
+}
+.course-info{
+    display: flex;
+    gap: 10px;
+
+}
+.duration{
+    background-color: lightsalmon;
+    padding: 5px;
+    border-radius: 10px;
+    color: orangered;
+    
+}
+   
+@media (max-width:992px){
+    .top-players, .courses{
+       
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+} 
+@media (max-width:688px){
+    .top-players, .courses{
+       
+        grid-template-columns: repeat(1, 1fr);/*for 1 row after moving*/
+        
+    }
+    .blog{
+        display: block;
+    } 
+ }  
+
+
